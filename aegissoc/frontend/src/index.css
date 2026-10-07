@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #080c14;
+    color: #f1f5f9;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom cyber scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1322;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
+
+/* Glassmorphism cyber panels */
+.soc-panel {
+  background: rgba(13, 19, 34, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 41, 59, 0.8);
+}
+
+.soc-card {
+  background: rgba(19, 27, 46, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(30, 41, 59, 0.6);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.soc-card:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 4px 20px -2px rgba(6, 182, 212, 0.1);
+}
+
+/* Cyber grid background */
+.bg-grid-cyber {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}

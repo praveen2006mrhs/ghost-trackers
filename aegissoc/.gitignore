@@ -1,0 +1,36 @@
+# Node & Frontend dependencies
+node_modules/
+dist/
+build/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python cache & environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+*.egg-info/
+
+# Pytest & test cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases & run state
+*.db
+*.sqlite
+*.sqlite3
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
