@@ -5,7 +5,10 @@ class Settings:
     PROJECT_DESCRIPTION: str = "Defensive Cybersecurity Operations & Threat Intelligence Suite"
     VERSION: str = "1.0.0"
     API_V1_PREFIX: str = "/api/v1"
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./aegissoc.db")
+    DATABASE_URL: str = os.getenv(
+        "DATABASE_URL",
+        "sqlite:////tmp/aegissoc.db" if os.getenv("VERCEL") else "sqlite:///./aegissoc.db"
+    )
     CORS_ORIGINS: list[str] = [
         "http://localhost:5173",
         "http://localhost:3000",

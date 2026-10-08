@@ -28,7 +28,7 @@ async function request(path, options = {}) {
 
 export const api = {
   // System
-  getHealth: () => request('/../../health'),
+  getHealth: () => request('/health'),
   
   // 1. Vulnerability Assessment
   scanCode: (code, language = 'python', targetName = 'Snippet') =>

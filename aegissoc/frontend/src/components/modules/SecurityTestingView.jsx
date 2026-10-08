@@ -14,7 +14,11 @@ import SeverityBadge from '../common/SeverityBadge';
 import { api } from '../../services/api';
 
 export default function SecurityTestingView() {
-  const [targetUrl, setTargetUrl] = useState('http://localhost:8000/api/v1/security-tests/mock-target');
+  const [targetUrl, setTargetUrl] = useState(
+    typeof window !== 'undefined' 
+      ? `${window.location.origin}/api/v1/security-tests/mock-target` 
+      : 'http://localhost:8000/api/v1/security-tests/mock-target'
+  );
   const [options, setOptions] = useState({
     check_cors: true,
     check_security_headers: true,
